@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="five/update" method="post">
+    <table>
+        <tr>
+            <td>ID</td>
+            <td><input type="text" th:value="${selectone.id}" name="id"/></td>
+        </tr>
+        <tr >
+            <td>姓名</td>
+            <td><input type="text" th:value="${selectone.name}" name="name"/></td>
+        </tr>
+        <tr>
+            <td>性别</td>
+            <td><input type="text" th:value="${selectone.sex}" name="sex"/></td>
+        </tr>
+        <tr >
+            <td>年龄</td>
+            <td><input type="text" th:value="${selectone.age}" name="age"/></td>
+        </tr>
+        <tr>
+            <td>生日</td>
+            <td><input type="text" th:value="${#dates.format(selectone.birthday,'yyyy-MM-dd')}" name="birthday"/></td>
+        </tr>
+
+        <input type="submit" value="保存"/>
+    </table>
+</form>
+</body>
+</html>
